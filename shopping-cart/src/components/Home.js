@@ -1,3 +1,5 @@
+import Button from 'react-bootstrap/Button'
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -13,7 +15,7 @@ const Home = () => {
         </span>
         <br />
         <Link to='/shop'>
-          <button>Shop page</button>
+        <Button variant="info" size="lg" >Shop page</ Button>
         </Link>
       </section>
     </div>

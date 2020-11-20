@@ -1,11 +1,12 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -16,6 +17,7 @@ code {
 * {
   margin: 0;
   padding: 0;
+  
   }
 
   html {
@@ -31,6 +33,16 @@ code {
     text-decoration: inherit;
   }
   
-  #github, a {
+  #github, .logo-link {
     width: 3vh;
+  }
+
+  #page-wrap {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+
+  h4, p {
+    font-size: 1rem;
   }

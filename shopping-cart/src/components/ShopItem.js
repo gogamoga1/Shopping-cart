@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useParams, useLocation, useHistory, useRouteMatch } from 'react-router-dom'
 import { phones } from './Data'
+import {useBasketCleanup} from '../App.js'
+
 
 const ShopItem = ({ id, setBasketPrice, setCurrentOrder, currentOrder }) => {
 
@@ -12,10 +14,11 @@ const ShopItem = ({ id, setBasketPrice, setCurrentOrder, currentOrder }) => {
   }
   function clickBasket(e) {
     e.preventDefault();
-    setBasketPrice(preValue => preValue + (phones[id - 1].price * itemCount ))
-    setCurrentOrder([...currentOrder, {itemname: phones[id - 1].title, price: phones[id - 1].price, qty: itemCount }])
-    console.log(currentOrder);
+    
+    setCurrentOrder([...currentOrder, {itemname: phones[id - 1].title, price: phones[id - 1].price, qty: parseInt(itemCount) }])
   }
+
+  useBasketCleanup(setBasketPrice, currentOrder)
 
   return (
     <div className='product-detail'>
@@ -23,23 +26,24 @@ const ShopItem = ({ id, setBasketPrice, setCurrentOrder, currentOrder }) => {
         <img src={require(`../assets/${phones[id - 1].img}`)['default']} alt='card' />
       </div>
       <div className='product-detail-info'>
+        <h1>
+        {phones[id - 1].title}
+        </h1>
         <h4>
-          Title: <span className='title'>{phones[id - 1].title}</span>
+          <strong> Price:</strong> <span className='title'>{phones[id - 1].price}$</span>
         </h4>
-        <h4>
-          Price: <span className='title'>{phones[id - 1].price}$</span>
-        </h4>
-        <button type='button' onClick={handleClick}>
-          Go back
-        </button>
         <div className='purchase'>
 
           <form onSubmit={(e) => clickBasket(e)}>
           <label htmlFor="quantity">Quantity (between 1 and 5):</label>
+          <div className="input-container">
           <input role='spinbutton' type='number' id='quantity' min='1' max='5' value={itemCount} onChange={(e) => setItemCount(e.target.value)} />
-          <button >Add to cart</button>{' '}
+          <button className='btn-shop-item' >Add to cart</button>{' '}</div>
           </form>
         </div>
+        <button type='button' className='btn-shop-item go-back' onClick={handleClick}>
+          Go back
+        </button>
       </div>
     </div>
   )

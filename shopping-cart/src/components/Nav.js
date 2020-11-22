@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../logo.png' // Tell webpack this JS file uses this image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { useMediaQuery } from 'react-responsive'
 import Badge from '@material-ui/core/Badge'
 import { withStyles } from '@material-ui/core/styles'
-import IconButton from '@material-ui/core/IconButton'
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
+import ProjectHeader from './ProjectHeader'
+
 const StyledBadge = withStyles((theme) => ({
   badge: {
     right: -1,
@@ -18,20 +18,16 @@ const StyledBadge = withStyles((theme) => ({
 }))(Badge)
 
 const Nav = ({ basketPrice, currentOrder }) => {
-console.log(currentOrder);
   const [basketCount, setbasketCount] = useState(0)
+  const [animation, setAnimation] = useState(0)
+  const [responsiveActive, setResponsiveActive] = useState(0)
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 440px)' })
 
   useEffect(() => {
-    const itemsCountInTheBasket = 
-    currentOrder.reduce((acc, curVal, curIdx) => {
-      return acc +=  curVal.qty
-    }, 0)
-    
-    console.log(itemsCountInTheBasket);
+    const itemsCountInTheBasket = currentOrder.reduce((acc, curVal) => (acc += curVal.qty), 0)
     setbasketCount(itemsCountInTheBasket)
-    
   }, [basketPrice])
-  const [animation, setAnimation] = useState(0)
+
   useEffect(() => {
     if (basketPrice) {
       setAnimation(1)
@@ -40,24 +36,40 @@ console.log(currentOrder);
       }, 1000)
     }
   }, [basketPrice])
+
   return (
-    <nav id='outer-container'>
+    <nav className='nav-container'>
       <ul className='navbar'>
         <div className='project-name'>
-          <a
-            href='https://github.com/gogamoga1/Shopping-cart/tree/master/shopping-cart'
-            className='logo-link'
-          >
-            <img id='github' src={logo} alt='github' /> Shopping cart
-          </a>
+          {!isTabletOrMobile ? (
+            <ProjectHeader />
+          ) : (
+            <li>
+              <FontAwesomeIcon
+                icon={faBars}
+                onClick={() => setResponsiveActive((prevValue) => !prevValue)}
+              />
+            </li>
+          )}
         </div>
         <div className='navbar-navigation'>
-          <li id='home'>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to='/shop'>Shop</Link>
-          </li>
+          <div
+            className={
+              responsiveActive
+                ? `is-open--navigation navbar-navigation-responsive`
+                : `navbar-navigation-responsive`
+            }
+          >
+            {isTabletOrMobile && <ProjectHeader />}
+
+            <li id='home'>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/shop'>Shop</Link>
+            </li>
+          </div>
+
           <li className={animation ? `wobble-hor-bottom` : ``}>
             <Link to='/products'>
               <span>

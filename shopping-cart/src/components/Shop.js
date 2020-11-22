@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { phones } from './Data'
 import { Link } from 'react-router-dom'
-import Button from '@material-ui/core/Button';
-
-
+import Button from '@material-ui/core/Button'
 
 function compare_price(a, b) {
   // sort by price
@@ -17,8 +15,7 @@ function compare_price(a, b) {
 }
 
 const Shop = () => {
-  const phonesClone = [...phones]
-  const createCardsArray = [...phones].sort(compare_price).map((el, index) => {
+  const createCardsArray = [...phones].sort(compare_price).map((el) => {
     return (
       <div className='product-item' data-id={el.id} key={el.id}>
         <div className='product-item-container'>
@@ -29,10 +26,11 @@ const Shop = () => {
           />
           <div className='product-item-info'>
             <h4>
-               <span className='title'><strong>{el.title}</strong></span>
+              <span className='title'>
+                <strong>{el.title}</strong>
+              </span>
             </h4>
             <p>
-              
               Price:{' '}
               <span className='title'>
                 <strong>{el.price}$</strong>
@@ -41,7 +39,9 @@ const Shop = () => {
           </div>
         </div>
         <Link to={`/shop/${el.id}`}>
-        <Button variant="contained" color="default">Details</ Button>
+          <Button variant='contained' color='default'>
+            Details
+          </Button>
         </Link>
       </div>
     )

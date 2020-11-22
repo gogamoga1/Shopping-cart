@@ -11,13 +11,14 @@ const Products = ({ currentOrder, clearBasket, basketPrice, setCurrentOrder, set
   useBasketCleanup(setBasketPrice, currentOrder)
 
   return (
-    <>{currentOrder.length >= 1 ? <div className='checkout-overview'>
-        <h2 className='checkout-header'>Cart overview:</h2>
-        <button onClick={clearBasket} className='btn-clear-basket'>
-          Clear basket
-        </button>
-         <Table striped bordered hover>
-          <table>
+    <>
+      {currentOrder.length >= 1 ? (
+        <div className='checkout-overview'>
+          <h2 className='checkout-header'>Cart overview:</h2>
+          <button onClick={clearBasket} className='btn-clear-basket'>
+            Clear basket
+          </button>
+          <Table striped bordered hover>
             <thead>
               <tr>
                 <th>Phone</th>
@@ -43,10 +44,13 @@ const Products = ({ currentOrder, clearBasket, basketPrice, setCurrentOrder, set
                 )
               })}
             </tbody>
-          </table>
-        </Table> 
-      </div>
-      : <div className='empty-basket'><h2>Basket is empty..</h2></div>}
+          </Table>
+        </div>
+      ) : (
+        <div className='empty-basket'>
+          <h2>Basket is empty..</h2>
+        </div>
+      )}
       <footer className='checkout'>
         <p className='checkout-p'>Total: {basketPrice}$ </p>
         <input type='button' className='button' value='Checkout' />

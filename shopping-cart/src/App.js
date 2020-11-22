@@ -7,30 +7,31 @@ import Shop from './components/Shop'
 import ShopItem from './components/ShopItem'
 import Products from './components/Products'
 
-import { Link, Route, Switch, useRouteMatch, useParams } from 'react-router-dom'
+import { Route, Switch, useRouteMatch } from 'react-router-dom'
 
-export function useBasketCleanup (setBasketPrice, currentOrder ) {
+export function useBasketCleanup(setBasketPrice, currentOrder) {
   useEffect(() => {
- setBasketPrice(currentOrder.reduce((acc, curVal, curIdx) => {
-   return acc += (curVal.price * curVal.qty)
- }, 0))
-}, [currentOrder])
+    setBasketPrice(
+      currentOrder.reduce((acc, curVal) => {
+        return (acc += curVal.price * curVal.qty)
+      }, 0)
+    )
+  }, [currentOrder])
 }
 function App() {
   const [basketPrice, setBasketPrice] = useState(0)
   const [currentOrder, setCurrentOrder] = useState([])
-  
+
   const match = useRouteMatch('/shop/:id')
-  
+
   const clearBasket = () => {
     setCurrentOrder([])
     setBasketPrice(0)
   }
-  
-  
+
   return (
     <div className='App'>
-      <Nav basketPrice={basketPrice}  currentOrder={currentOrder}/>
+      <Nav basketPrice={basketPrice} currentOrder={currentOrder} />
 
       <Switch>
         <Route path='/shop/:id'>

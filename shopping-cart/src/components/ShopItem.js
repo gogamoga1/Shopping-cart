@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { phones } from './Data'
+import { phones, images } from './Data'
 import { useBasketCleanup } from '../App.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
@@ -23,10 +23,11 @@ const ShopItem = ({ id, setBasketPrice, setCurrentOrder, currentOrder }) => {
 
   useBasketCleanup(setBasketPrice, currentOrder)
 
+console.log(images)
   return (
     <div className='product-detail'>
       <div className='product-detail-image'>
-        <img src={require(`../assets/${phones[id - 1].img}`)['default']} alt='card' />
+        <img src={images[phones[id - 1].img].default} alt='card' />
       </div>
       <div className='product-detail-info'>
         <h1>{phones[id - 1].title}</h1>

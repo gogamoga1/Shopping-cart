@@ -7,3 +7,12 @@ export const phones = [
   { id: 6, title: 'Apple iPhone 11', price: 599, img: 'apple-iphone-11.jpg' },
   { id: 7, title: 'Apple iPhone 12 Pro Max', price: 1099, img: 'apple-iphone-12-pro-max-.jpg' },
 ]
+
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+
+export const images = importAll(require.context('../assets', false, /\.(png|jpe?g|svg)$/));

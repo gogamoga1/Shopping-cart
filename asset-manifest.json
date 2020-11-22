@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/css/main.91b93d22.chunk.css",
+    "main.js": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/js/main.5853b920.chunk.js",
+    "main.js.map": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/js/main.5853b920.chunk.js.map",
+    "runtime-main.js": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/js/runtime-main.6e203c9f.js",
+    "runtime-main.js.map": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/js/runtime-main.6e203c9f.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.bb00c0fa.chunk.js": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/js/2.bb00c0fa.chunk.js",
+    "static/js/2.bb00c0fa.chunk.js.map": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/js/2.bb00c0fa.chunk.js.map",
+    "index.html": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.91b93d22.chunk.css.map": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/css/main.91b93d22.chunk.css.map",
+    "static/js/2.bb00c0fa.chunk.js.LICENSE.txt": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/js/2.bb00c0fa.chunk.js.LICENSE.txt",
+    "static/media/apple-iphone-11.jpg": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/media/apple-iphone-11.da9870d1.jpg",
+    "static/media/apple-iphone-12-pro-max-.jpg": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/media/apple-iphone-12-pro-max-.12cad3df.jpg",
+    "static/media/asus-rog-phone-3-zs661ks.jpg": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/media/asus-rog-phone-3-zs661ks.b85d160d.jpg",
+    "static/media/seeds2.jpg": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/media/seeds2.f6022395.jpg",
+    "static/media/xiaomi-redmi-note-8-pro-.jpg": "/gogamoga1/Shopping-cart/tree/master/shopping-cart/static/media/xiaomi-redmi-note-8-pro-.00cdb47c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e203c9f.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.bb00c0fa.chunk.js",
+    "static/css/main.91b93d22.chunk.css",
+    "static/js/main.5853b920.chunk.js"
+  ]
+}

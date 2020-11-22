@@ -1,32 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.93f46b90.chunk.css",
-    "main.js": "/static/js/main.d84aee40.chunk.js",
-    "main.js.map": "/static/js/main.d84aee40.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ccb73479.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ccb73479.js.map",
-    "static/css/2.20aa2d7b.chunk.css": "/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.8319dd38.chunk.js": "/static/js/2.8319dd38.chunk.js",
-    "static/js/2.8319dd38.chunk.js.map": "/static/js/2.8319dd38.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.20aa2d7b.chunk.css.map": "/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.93f46b90.chunk.css.map": "/static/css/main.93f46b90.chunk.css.map",
-    "static/js/2.8319dd38.chunk.js.LICENSE.txt": "/static/js/2.8319dd38.chunk.js.LICENSE.txt",
-    "static/media/apple-iphone-11.jpg": "/static/media/apple-iphone-11.da9870d1.jpg",
-    "static/media/apple-iphone-12-pro-max-.jpg": "/static/media/apple-iphone-12-pro-max-.12cad3df.jpg",
-    "static/media/asus-rog-phone-3-zs661ks.jpg": "/static/media/asus-rog-phone-3-zs661ks.b85d160d.jpg",
-    "static/media/logo.d8c6d6c9.png": "/static/media/logo.d8c6d6c9.png",
-    "static/media/oneplus-8.jpg": "/static/media/oneplus-8.b5271031.jpg",
-    "static/media/samsung-galaxy-note20-5g-r.jpg": "/static/media/samsung-galaxy-note20-5g-r.ffa50a92.jpg",
-    "static/media/App.css": "/static/media/seeds2.f6022395.jpg",
-    "static/media/sony-xperia-1-II-o.jpg": "/static/media/sony-xperia-1-II-o.b5da76bf.jpg",
-    "static/media/xiaomi-redmi-note-8-pro-.jpg": "/static/media/xiaomi-redmi-note-8-pro-.00cdb47c.jpg"
+    "main.css": "/Shopping-cart/static/css/main.6231425a.chunk.css",
+    "main.js": "/Shopping-cart/static/js/main.5430c50d.chunk.js",
+    "runtime-main.js": "/Shopping-cart/static/js/runtime-main.15227d66.js",
+    "static/css/2.1b4fbf1f.chunk.css": "/Shopping-cart/static/css/2.1b4fbf1f.chunk.css",
+    "static/js/2.8319dd38.chunk.js": "/Shopping-cart/static/js/2.8319dd38.chunk.js",
+    "index.html": "/Shopping-cart/index.html",
+    "static/js/2.8319dd38.chunk.js.LICENSE.txt": "/Shopping-cart/static/js/2.8319dd38.chunk.js.LICENSE.txt",
+    "static/media/apple-iphone-11.jpg": "/Shopping-cart/static/media/apple-iphone-11.da9870d1.jpg",
+    "static/media/apple-iphone-12-pro-max-.jpg": "/Shopping-cart/static/media/apple-iphone-12-pro-max-.12cad3df.jpg",
+    "static/media/asus-rog-phone-3-zs661ks.jpg": "/Shopping-cart/static/media/asus-rog-phone-3-zs661ks.b85d160d.jpg",
+    "static/media/logo.d8c6d6c9.png": "/Shopping-cart/static/media/logo.d8c6d6c9.png",
+    "static/media/oneplus-8.jpg": "/Shopping-cart/static/media/oneplus-8.b5271031.jpg",
+    "static/media/samsung-galaxy-note20-5g-r.jpg": "/Shopping-cart/static/media/samsung-galaxy-note20-5g-r.ffa50a92.jpg",
+    "static/media/App.css": "/Shopping-cart/static/media/seeds2.f6022395.jpg",
+    "static/media/sony-xperia-1-II-o.jpg": "/Shopping-cart/static/media/sony-xperia-1-II-o.b5da76bf.jpg",
+    "static/media/xiaomi-redmi-note-8-pro-.jpg": "/Shopping-cart/static/media/xiaomi-redmi-note-8-pro-.00cdb47c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ccb73479.js",
-    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/runtime-main.15227d66.js",
+    "static/css/2.1b4fbf1f.chunk.css",
     "static/js/2.8319dd38.chunk.js",
-    "static/css/main.93f46b90.chunk.css",
-    "static/js/main.d84aee40.chunk.js"
+    "static/css/main.6231425a.chunk.css",
+    "static/js/main.5430c50d.chunk.js"
   ]
 }

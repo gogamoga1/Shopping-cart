@@ -23,7 +23,6 @@ const ShopItem = ({ id, setBasketPrice, setCurrentOrder, currentOrder }) => {
 
   useBasketCleanup(setBasketPrice, currentOrder)
 
-console.log(images)
   return (
     <div className='product-detail'>
       <div className='product-detail-image'>

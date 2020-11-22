@@ -54,7 +54,7 @@ function App() {
             setCurrentOrder={setCurrentOrder}
           />
         </Route>
-        <Route exact path='/'>
+        <Route path='/'>
           <Home />
         </Route>
       </Switch>
